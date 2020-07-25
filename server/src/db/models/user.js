@@ -5,9 +5,7 @@ const UserSchema = Schema(
     {
         username: { type: String },
     },
-    { timestamps: false, versionKey: false, collection: "users" }
+    { timestamps: true, versionKey: false, collection: "users" }
 );
 
-const User = mongoose.model("User", UserSchema);
-
-module.exports = User;
+module.exports = mongoose.model("User", UserSchema);

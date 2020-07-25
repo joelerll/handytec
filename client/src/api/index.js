@@ -8,7 +8,16 @@ export default {
         Get: () => {
             return new Promise((resolve, reject) => {
                 axios.get(`${URL}/${ENDPOINTS.USERS.GET}`).then(resp => {
-                    resolve(resp.data || {})
+                    resolve(resp.data)
+                }).catch(err => {
+                    reject(err)
+                })
+            })
+        },
+        Create: (body) => {
+            return new Promise((resolve, reject) => {
+                axios.post(`${URL}/${ENDPOINTS.USERS.GET}`, body).then(resp => {
+                    resolve(resp.data)
                 }).catch(err => {
                     reject(err)
                 })
@@ -19,7 +28,7 @@ export default {
         Get: () => {
             return new Promise((resolve, reject) => {
                 axios.get(`${URL}/${ENDPOINTS.ROOMS.GET}`).then(resp => {
-                    resolve(resp.data || {})
+                    resolve(resp.data)
                 }).catch(err => {
                     reject(err)
                 })

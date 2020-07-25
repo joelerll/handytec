@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Api from "./api"
+import Api from "./api";
 
 export default {
   name: "App",
@@ -18,19 +18,31 @@ export default {
   data: () => {
     return {
       message: "",
-      users: {}
+      users: {},
     };
   },
-  created (){
-    this.userGet()
+  created() {
+    this.UsersGet();
+    // this.RoomsGet();
   },
   methods: {
-    userGet () {
-      Api.UsersFetch.Get().then((data) => {
-        console.log(data)
-      }).catch((err) => {
-        console.log(err)
-      })
+    UsersGet() {
+      Api.UsersFetch.Get()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    RoomsGet() {
+      Api.RoomFetch.Get()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
     clickButton: function () {
       console.log(this.$socket);
