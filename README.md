@@ -51,6 +51,13 @@ Build dist
 NODE_ENV=production npm run --prefix=client vue-cli-service build
 ```
 
+## Deploy to Server
+
+```sh
+git push heroku master
+```
+
+<!-- heroku config:set NPM_CONFIG_PRODUCTION=false  -->
 <!-- folder structure explicacion
 uso de prettier
 use de vue-cli
