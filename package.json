@@ -6,7 +6,7 @@
   "author": "Joel Rodriguez <joelerll@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "npm install --production --prefix server"
+    "build": "npm install --production --prefix server &&  npm install --prefix client "
   },
   "engines": {
     "node": "v11.10.1"
