@@ -1,64 +1,52 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <input type="text" v-model="message" />
-    <button v-on:click="clickButton">Enviar</button>
+    <v-app> 
+          <h1>Handytec Chat</h1>
+    <div>
+    <v-card
+    class="mx-auto"
+    max-width="400"
+  >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    >
+      <v-card-title>Top 10 Australian beaches</v-card-title>
+    </v-img>
+
+    <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
+
+    <v-card-text class="text--primary">
+      <div>Whitehaven Beach</div>
+
+      <div>Whitsunday Island, Whitsunday Islands</div>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn
+        color="orange"
+        text
+      >
+        Share
+      </v-btn>
+
+      <v-btn
+        color="orange"
+        text
+      >
+        Explore
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+      <router-view></router-view>
+    </div>
+    </v-app>
   </div>
 </template>
 
 <script>
-import Api from "./api";
-
 export default {
   name: "App",
-  components: {
-    // HelloWorld,
-  },
-  data: () => {
-    return {
-      message: "",
-      users: {},
-    };
-  },
-  created() {
-    this.UsersGet();
-    // this.RoomsGet();
-  },
-  methods: {
-    UsersGet() {
-      Api.UsersFetch.Get()
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
-    RoomsGet() {
-      Api.RoomFetch.Get()
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
-    clickButton: function () {
-      console.log(this.$socket);
-      this.$socket.chat.emit("message", this.message);
-    },
-  },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

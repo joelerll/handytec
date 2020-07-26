@@ -7,6 +7,8 @@ module.exports = (api) => {
 
     api.get("/room", Room.Get);
     api.post("/room", Room.Post);
-    api.post("/room/:id", Room.Get);
+    api.get("/room/:id", Room.GetOne);
+
+    api.post("/room/:id", Room.Message);
     return api;
 };

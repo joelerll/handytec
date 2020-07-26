@@ -14,4 +14,10 @@ module.exports = {
         const Room = await req.DB.Room.findById(id);
         return res.send({ state: "OK", data: Room });
     },
+    Message: async (req, res) => {
+        const { message } = req.body;
+        const { id } = req.params;
+        await req.DB.Room.updateOne({ _id: id }, { $push: { chat: message } });
+        return res.send({ state: "OK" });
+    },
 };

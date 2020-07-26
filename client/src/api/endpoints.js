@@ -6,6 +6,7 @@ module.exports = {
     },
     ROOMS: {
         GET: "api/room",
-        GET_ONE: (id) => `api/username/${id}`
+        GET_ONE: (id) => `api/room/${id}`,
+        MESSAGE: (id) => `api/room/${id}`
     }
 }

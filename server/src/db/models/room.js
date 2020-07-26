@@ -16,6 +16,13 @@ const RoomSchema = Schema(
                     type: String,
                     default: MESSAGE_TYPES.TEXT,
                 },
+                by: String,
+                to: String,
+            },
+        ],
+        users: [
+            {
+                type: String,
             },
         ],
     },

@@ -1,10 +1,13 @@
-module.exports = (http) => {
-    const io = require("socket.io")(http);
-    const SocketChat = io.of("/chat");
+module.exports = (io) => {
+    const SocketChat = io;
     SocketChat.on("connection", (socket) => {
-        console.log("a user connected");
         socket.on("message", (data) => {
-            console.log(data);
+            console.log("send to room message: ", data);
+            SocketChat.in(`${data.roomname}`).emit("MESSAGE", data);
+        });
+        socket.on("join", (data) => {
+            console.log(`user ${data.by} a ${data.roomname}`);
+            socket.join(`${data.roomname}`);
         });
     });
 };

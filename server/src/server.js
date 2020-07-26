@@ -12,7 +12,7 @@ function onError(error) {
     switch (error.code) {
         case "EACCES":
             console.info(
-                `${bind} correr en otro puerto, este puerto requiere permisos de root`,
+                `${bind} correr en otro puerto, este puerto requiere permisos de root`
             );
             process.exit(1);
         case "EADDRINUSE":

@@ -1,16 +1,19 @@
 const express = require("express");
 const http = require("http");
-const bodyParser = require("body-parser");
+const morgan = require("morgan");
+const cors = require("cors");
 
-const io = require("./ws");
 const api = require("./api/index");
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
+app.use(morgan("tiny"));
 
-const server = http.Server(app);
-io(server);
+const server = http.createServer(app);
+
+const socket = require("socket.io");
+const IO = socket(server);
+require("./ws")(IO);
 
 app.use("/api", api);
 

@@ -3,6 +3,7 @@ const _ = require("lodash");
 const { DATABASE, ENV } = require("../constants");
 
 const User = require("./models/user");
+const Room = require("./models/room");
 
 const build = (config) => {
     if (config.port) {
@@ -20,6 +21,7 @@ class Mongo {
             config
         );
         this.User = User;
+        this.Room = Room;
     }
 
     connect() {
