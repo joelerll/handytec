@@ -17,6 +17,8 @@ require("./ws")(IO);
 
 app.use("/api", api);
 
+app.use("/", express.static("dist"));
+
 app.use((req, res, next) => {
     res.status(404);
     res.send("NOT FOUND");

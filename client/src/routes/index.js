@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router'
-import Chat from "../components/Chat"
+import Chat from "../components/Chat/Chat"
 import Main from "../components/Main";
 
 const routes = [

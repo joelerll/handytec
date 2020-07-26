@@ -9,5 +9,8 @@ module.exports = {
             host: "localhost",
             database: "handytec",
         },
+        production: {
+            url: process.env.MONGO_URL,
+        },
     },
 };

@@ -1,18 +1,17 @@
 # Reto Desarrollador handytec
 
-## Features
+## Dependencies
 
-- [] Mostrar todos los rooms
-- [] Mostrar todos los usuarios conectados
-- [] crear un room
-- [] crear un usuario
-- [] hablar con un usuario
-- [] ingresar a un room
+- Node >= 11.0.0
+- MongoDB
 
-# Documento
-folder structure explicacion
+## Development
+
+## Production
+
+<!-- folder structure explicacion
 uso de prettier
 use de vue-cli
-uso de socketio
+uso de socketio -->
 
 <!-- https://www.codereadability.com/automated-code-formatting-with-prettier/ -->

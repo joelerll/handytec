@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="Main">
     <div>
       <UsersConnected />
     </div>
@@ -11,7 +11,7 @@ import UsersConnected from "./UsersConnected";
 import Api from "../api";
 
 export default {
-  name: "App",
+  name: "Main",
   components: {
     UsersConnected,
   },
@@ -42,7 +42,6 @@ export default {
         });
     },
     clickButton: function () {
-      console.log(this.$socket);
       this.$socket.chat.emit("message", this.message);
     },
   },

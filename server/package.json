@@ -1,7 +1,8 @@
 {
     "scripts": {
-        "dev": "cross-env NODE_ENV=development env-cmd nodemon src/server.js --config nodemon.json ",
-        "test": ""
+        "dev": "cross-env NODE_ENV=development env-cmd nodemon src/server.js --config nodemon.json",
+        "test": "",
+        "prod": "export $(cat .env | xargs)  && node src/server.js"
     },
     "dependencies": {
         "body-parser": "^1.19.0",

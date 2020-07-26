@@ -1,46 +1,32 @@
 <template>
   <div id="app">
     <v-app> 
-          <h1>Handytec Chat</h1>
-    <div>
-    <v-card
-    class="mx-auto"
-    max-width="400"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    >
-      <v-card-title>Top 10 Australian beaches</v-card-title>
-    </v-img>
+      <v-app-bar app color="primary" dark>
+        <div class="d-flex align-center">
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            src="handytec.svg"
+            width="200"
+          />
+          <h1>Chat</h1>
+        </div>
 
-    <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
+        <v-spacer></v-spacer>
 
-    <v-card-text class="text--primary">
-      <div>Whitehaven Beach</div>
+        <v-btn
+          href="https://www.handytec.mobi/"
+          target="_blank"
+          text
+        >
+          <span class="mr-2">Página Web</span>
+          <v-icon>mdi-open-in-new</v-icon>
+        </v-btn>
+      </v-app-bar>
 
-      <div>Whitsunday Island, Whitsunday Islands</div>
-    </v-card-text>
-
-    <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Share
-      </v-btn>
-
-      <v-btn
-        color="orange"
-        text
-      >
-        Explore
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-      <router-view></router-view>
-    </div>
+      <v-main>
+        <router-view></router-view>
+      </v-main>
     </v-app>
   </div>
 </template>

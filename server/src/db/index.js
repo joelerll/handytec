@@ -6,6 +6,9 @@ const User = require("./models/user");
 const Room = require("./models/room");
 
 const build = (config) => {
+    if (config.url) {
+        return config.url;
+    }
     if (config.port) {
         return `mongodb://${config.host}/${config.database}`;
     }

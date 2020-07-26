@@ -3,5 +3,6 @@
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
   "javascript.format.insertSpaceAfterConstructor": true,
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "editor.wordWrap": "on"
 }
