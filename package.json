@@ -1,0 +1,8 @@
+{
+  "name": "handytec",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/joelerll/handytec.git",
+  "author": "Joel Rodriguez <joelerll@gmail.com>",
+  "license": "MIT"
+}
