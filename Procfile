@@ -1,2 +1,2 @@
-release: NODE_ENV=development npm install --prefix client && NODE_ENV=production npm run --prefix=client vue-cli-service build && NODE_ENV=production npm install --prefix server
+release: NODE_ENV=development npm install --prefix client && NODE_ENV=production npm run --prefix=client vue-cli-service build && npm install --production --prefix server
 web: NODE_ENV=production node server/src/server.js
