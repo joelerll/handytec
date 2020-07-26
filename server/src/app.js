@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const morgan = require("morgan");
 const cors = require("cors");
+const path = require("path");
 
 const api = require("./api/index");
 
@@ -17,7 +18,7 @@ require("./ws")(IO);
 
 app.use("/api", api);
 
-app.use("/", express.static("dist"));
+app.use("/", express.static(path.resolve(__dirname, "dist")));
 
 app.use((req, res, next) => {
     res.status(404);
