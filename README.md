@@ -7,7 +7,49 @@
 
 ## Development
 
+* Client
+
+```sh
+npm run dev
+```
+
+* Server
+
+```
+npm run serve
+```
+
+## Environments
+
+* Client
+
+```txt
+URL_PRODUCTION=
+VUE_APP_URL=
+```
+
+* Server
+```txt
+PORT=
+NODE_ENV=
+MONGO_URL=
+```
+
 ## Production
+
+* Server
+
+```sh
+npm run prod
+```
+
+* Client
+
+Build dist
+
+```sh
+NODE_ENV=production npm run --prefix=client vue-cli-service build
+```
 
 <!-- folder structure explicacion
 uso de prettier
