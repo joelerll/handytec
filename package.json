@@ -5,6 +5,9 @@
   "repository": "https://github.com/joelerll/handytec.git",
   "author": "Joel Rodriguez <joelerll@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "npm install --production --prefix server"
+  },
   "engines": {
     "node": "v11.10.1"
   }
